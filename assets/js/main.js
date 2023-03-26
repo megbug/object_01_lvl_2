@@ -15,11 +15,22 @@ let edelMetallPreise = [
 ];
 
 // ==============================================================
+let table = document.getElementById('myTable');
+
 let edelMetallPreiseArrName = [];
 
 edelMetallPreise.forEach(element => {
+    let row = table.insertRow();
+    let nameCell = row.insertCell(0);
+    let priceCell = row.insertCell(1)
+    let veraenderungCell = row.insertCell(2)
+    
     edelMetallPreiseArrName.push(element.name);
+    nameCell.innerHTML = `${element.name}`;
+    priceCell.innerHTML = `${element.preiseGramEuro}`;
+    veraenderungCell.innerHTML = `${element.veraenderung}`;
 });
+
 // console.log(edelMetallPreiseArrName);
 
 edelMetallPreiseArrMapName = edelMetallPreise.map((element) => {
@@ -32,6 +43,7 @@ let edelMetallPreiseArrPreis = [];
 
 edelMetallPreise.forEach(element => {
     edelMetallPreiseArrPreis.push(element.preiseGramEuro);
+
 });
 // console.log(edelMetallPreiseArrPreis);
 
@@ -58,6 +70,14 @@ let edelMetallPreis2 = edelMetallPreise.filter((element) => {
     return element.preiseGramEuro > 50
 })
 // console.log(edelMetallPreis2);
+
+
+// let table = document.createElement("table");
+// document.body.appendChild(table);
+
+// table.rows(2)
+
+// let row = table.insertRow();
 
 // ==============================================================
 
