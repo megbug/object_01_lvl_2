@@ -71,14 +71,6 @@ let edelMetallPreis2 = edelMetallPreise.filter((element) => {
 })
 // console.log(edelMetallPreis2);
 
-
-// let table = document.createElement("table");
-// document.body.appendChild(table);
-
-// table.rows(2)
-
-// let row = table.insertRow();
-
 // ==============================================================
 
 // lvl_2_2
